@@ -1,131 +1,365 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mao SeavHor - SV25</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100%;
+      }
+      table {
+        width: 100%;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      .main img {
+        width: 100%;
+        height: 100%;
+      }
+      th {
+        border: 1px solid black;
+      }
+      .nav-bar a {
+        margin: 0 30px;
+        text-decoration: none;
+        color: rgb(243, 111, 133);
+      }
+      .item th {
+        height: 300px;
+      }
+      .item tr th div {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .item tr th img {
+        height: 200px;
+        width: 200px;
+      }
+      .item tr th p {
+        font-size: 24px;
+      }
+      .item tr th div p:nth-child(2) {
+        color: darkgoldenrod;
+        font-size: 42px;
+      }
+      .logo-container {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+
+      .logo {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        animation: slide 30s linear infinite;
+      }
+
+      @keyframes slide {
+        0% {
+          left: 100%;
         }
-        body{
-            width: 100%;
+        50% {
+          left: 0%;
         }
-        table{
-            width: 100%;
-            border: 1px solid black;
-            border-collapse: collapse;
+        100% {
+          left: 100%;
         }
-        .main img{
-            width: 100%;
-            height: 100%;
-        }
-        th{
-            border: 1px solid black;
-        }
-        .nav-bar a{
-            margin: 0 30px;
-            text-decoration: none;
-            color: rgb(243, 111, 133);
-        }
-        .item th{
-            height: 400px;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <table class="main">
-        <tr >
-            <th><img src="./img/toon.png" alt=""></th>
-            <th colspan="2" rowspan="2"><img src="./img/pancake.png" alt=""></th>
-            
-        </tr>
-        <tr style="height: 100px;">
-            <th style="height: 100px; width: 500px;"><img src="./img/coko.png" alt="" style="height: 225px; width: 500px; padding: 0;"></th>
-            
-        </tr>
-        <tr>
-            <th colspan="3" style="height: 100px;">
-                <img src="./img/logo.png" alt="" style="height: 75px; width: 75px;"> <p>Welcome To Z'HOR CAKE Store</p>
-            </th>
-            
-        </tr>
-        <tr>
-            <th colspan="3" style="height: 50px;" class="nav-bar">
-                <a href="">HOME</a>
-                <a href="">CAKE</a>
-                <a href="">BREAD</a>
-                <a href="">CROISANT</a>
-                <a href="">CONTACT</a>
-            </th>
-        </tr>
-        <tr>
-            <th colspan="3">
-                <table class="item">
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                    <tr>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                        <th>Item</th>
-                    </tr>
-                </table>
-            </th>
-        </tr>
+      <tr>
+        <th><img src="./img/toon.png" alt="" /></th>
+        <th colspan="2" rowspan="2"><img src="./img/pancake.png" alt="" /></th>
+      </tr>
+      <tr style="height: 100px">
+        <th style="height: 100px; width: 500px">
+          <img
+            src="./img/coko.png"
+            alt=""
+            style="height: 225px; width: 500px; padding: 0"
+          />
+        </th>
+      </tr>
+      <tr>
+        <th colspan="3" style="height: 100px">
+          <div class="logo-container">
+            <img
+              src="./img/logo.png"
+              alt="Logo"
+              class="logo"
+              style="height: 75px; width: 75px"
+            />
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th colspan="3" style="height: 50px" class="nav-bar">
+          <a href="">HOME</a>
+          <a href="#cake">CAKE</a>
+          <a href="#bread">BREAD</a>
+          <a href="#croisant">CROISANT</a>
+          <a href="">CONTACT</a>
+        </th>
+      </tr>
+      <tr>
+        <th colspan="3">
+          <table class="item">
+            <tr>
+              <th
+                id="cake"
+                colspan="4"
+                style="
+                  height: 50px;
+                  font-size: 32px;
+                  background: pink;
+                  color: white;
+                "
+              >
+                Cake
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <img
+                  src="./cake/cake/vecteezy_birthday-cake-with_25063607.png"
+                  alt=""
+                />
+                <div>
+                  <p>Pinky Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/cake/vecteezy_birthday-cake-cutout_23522879.png"
+                  alt=""
+                />
+                <div>
+                  <p>Sky-Vai Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/cake/vecteezy_birthday-cake-with_25067212.png"
+                  alt=""
+                />
+                <div>
+                  <p>Berry Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/cake/vecteezy_birthday-cake-cutout_23522878.png"
+                  alt=""
+                />
+                <div>
+                  <p>Choco Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <img src="./cake/cake/delicious-slice-carrot-cake.jpg" alt="" />
+                <div>
+                  <p>Carrot Shape Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/cake/vanilla-cream-cake-with-strawberry-top.png"
+                  alt=""
+                />
+                <div>
+                  <p>Vanilla Cream Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/cake/vecteezy_set-of-birthday-colorful-cupcake_22228586.png"
+                  alt=""
+                />
+                <div>
+                  <p>Color MiniCake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/cake/vecteezy_chocolate-variety-cake_22228574.png"
+                  alt=""
+                />
+                <div>
+                  <p>Choco Victor Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th
+                id="bread"
+                colspan="4"
+                style="
+                  height: 50px;
+                  font-size: 32px;
+                  background: pink;
+                  color: white;
+                "
+              >
+                BREAD
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <img
+                  src="./cake/bread/vecteezy_ai-generated-freshly-baked-loaf-of-bread-png_35675625.png"
+                  alt=""
+                />
+                <div>
+                  <p>Loaf Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/bread/vecteezy_ai-generated-stack-of-sliced-artisan-bread-png_41177473.png"
+                  alt=""
+                />
+                <div>
+                  <p>Artisan Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/bread/vecteezy_baguette-with_25066807.png"
+                  alt=""
+                />
+                <div>
+                  <p>Baguette Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/bread/vecteezy_bread-with_25064822.png"
+                  alt=""
+                />
+                <div>
+                  <p>Beef Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <img
+                  src="./cake/bread/vecteezy_cutout-baquette-bread-on-transparent-background_10833361.png"
+                  alt=""
+                />
+                <div>
+                  <p>Banquette Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/bread/vecteezy_cutout-whole-wheat-bread-on-transparent-background_9902344.png"
+                  alt=""
+                />
+                <div>
+                  <p>Wheat Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/bread/freshly-baked-bread-isolated-white-background.png"
+                  alt=""
+                />
+                <div>
+                  <p>Baked Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img src="./cake/bread/rb_27953.png" alt="" />
+                <div>
+                  <p>RB Bread</p>
+                  <p>$25</p>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th
+                id="croisant"
+                colspan="4"
+                style="
+                  height: 50px;
+                  font-size: 32px;
+                  background: pink;
+                  color: white;
+                "
+              >
+                CROISANT
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <img src="./cake/croisant/croissants-table.jpg" alt="" />
+                <div>
+                  <p>kda</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img src="./cake/croisant/rb_2151837116.png" alt="" />
+                <div>
+                  <p>Sky-Vai Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/croisant/roll-french-studio-closeup-gold.jpg"
+                  alt=""
+                />
+                <div>
+                  <p>Berry Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+              <th>
+                <img
+                  src="./cake/croisant/vecteezy_ai-generated-croissants-croissants-png-croissants-with_40490188.png"
+                  alt=""
+                />
+                <div>
+                  <p>Choco Cake</p>
+                  <p>$25</p>
+                </div>
+              </th>
+            </tr>
+          </table>
+        </th>
+      </tr>
     </table>
-</body>
+  </body>
 </html>
